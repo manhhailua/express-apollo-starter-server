@@ -1,10 +1,5 @@
-const express = require('express');
+const index = require('./root');
 
-const router = express.Router();
-
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index', { title: 'GraphQL Starter Server' });
-});
-
-module.exports = router;
+module.exports = {
+  index,
+};

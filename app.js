@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 // import routes
-const index = require('./routes/index');
+const { index } = require('./routes');
 
 // import middleware
 const notFoundHandler = require('./middleware/404');
