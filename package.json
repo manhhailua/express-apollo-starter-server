@@ -8,16 +8,22 @@
     "test": "jest --forceExit",
     "test:coverage": "jest --coverage --forceExit"
   },
+  "author": {
+    "name": "Manh Pham (manhpt)",
+    "email": "manhhailua@gmail.com"
+  },
   "dependencies": {
     "apollo-server-express": "^1.3.2",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "graphql": "^0.13.1",
     "graphql-tools": "^2.21.0",
     "morgan": "^1.9.0",
+    "nconf": "^0.10.0",
     "pug": "^2.0.0-rc.4",
     "serve-favicon": "^2.4.5"
   },
