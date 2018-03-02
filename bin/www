@@ -4,9 +4,21 @@
  * Module dependencies.
  */
 
+require('dotenv').config();
+const nconf = require('nconf');
 const app = require('../app');
-const debug = require('debug')('express-apollo-starter-server:server');
+const debug = require('debug')('kinkan-graphql-server:server');
 const http = require('http');
+
+/**
+ * Get ENV variables from environment and store in Express.
+ */
+
+nconf
+  .env()
+  .argv()
+  .required(['NODE_ENV', 'PORT', 'MONGO_URL']);
+app.set('config', nconf);
 
 /**
  * Get port from environment and store in Express.
