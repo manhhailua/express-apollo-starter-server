@@ -1,5 +1,7 @@
-const index = require('./root');
+const root = require('./root');
+const graphql = require('./graphql');
 
 module.exports = {
-  index,
+  root,
+  graphql,
 };

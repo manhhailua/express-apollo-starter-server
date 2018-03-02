@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 // import routes
-const { index, graphql } = require('./routes');
+const { root, graphql } = require('./routes');
 
 // import middleware
 const notFoundHandler = require('./middleware/404');
@@ -38,9 +38,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// attach root url
-app.use('/', index);
-app.use('/graphql', graphql);
+// attach to root url
+app.use('/', root, graphql);
 
 // catch 404 and forward to error handler
 app.use(notFoundHandler);
