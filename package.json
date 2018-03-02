@@ -12,6 +12,17 @@
     "name": "Manh Pham (manhpt)",
     "email": "manhhailua@gmail.com"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/config.js"
+    ]
+  },
   "dependencies": {
     "apollo-server-express": "^1.3.2",
     "bluebird": "^3.5.1",

@@ -1,8 +1,0 @@
-{
-  "collectCoverageFrom": [
-    "**/*.{js,pug}",
-    "!**/node_modules/**",
-    "!**/vendor/**"
-  ],
-  "verbose": true
-}
