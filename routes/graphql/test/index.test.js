@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const request = require('supertest');
 
 // For route isolation testing purpose
@@ -8,7 +9,7 @@ const routeGraphql = require('../index');
 describe('Route', () => {
   beforeAll(() => {
     app.set('view engine', 'pug');
-    app.use('/', routeGraphql);
+    app.use('/', bodyParser.json(), routeGraphql);
   });
 
   describe('/graphql', () => {

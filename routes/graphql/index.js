@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const { makeExecutableSchema } = require('graphql-tools');
 
@@ -35,7 +34,7 @@ const schema = makeExecutableSchema({
 });
 
 // The GraphQL endpoint
-router.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
+router.use('/graphql', graphqlExpress({ schema }));
 
 // GraphiQL, a visual editor for queries
 router.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
