@@ -17,7 +17,7 @@ const http = require('http');
 nconf
   .env()
   .argv()
-  .required(['NODE_ENV', 'PORT', 'MONGO_URL']);
+  .required(['NODE_ENV', 'PORT']);
 app.set('config', nconf);
 
 /**
