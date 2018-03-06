@@ -7,7 +7,7 @@
 require('dotenv').config();
 const nconf = require('nconf');
 const app = require('../app');
-const debug = require('debug')('kinkan-graphql-server:server');
+const debug = require('debug')('express-apollo-starter-server:server');
 const http = require('http');
 
 /**
